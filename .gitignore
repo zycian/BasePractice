@@ -1,0 +1,10 @@
+# 编译产物
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+
+# Visual Studio / VS Code
+.vs/
+*.user
