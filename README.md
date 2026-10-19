@@ -1,5 +1,7 @@
 # Cpractice
 
+都给我看好了哦
+
 LeetCode C 语言练习记录。
 
 ## 文件命名
