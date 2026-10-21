@@ -11,12 +11,12 @@ int is_draw(void)//先写对结果的判断和return再进入分支；通过计数器来统计
     //检查行
     for(int i=0;i<5;i++)
     {
-        int base=board[i*5][0];//以每行第一个为基准
+        int base=board[i][0];//以每行第一个为基准
         int same=1;
     
         for(int j=1;j<5;j++)
         {
-            if(board[i*5][j]!=base)//遍历每行中剩余的数看是否相同
+            if(board[i][j]!=base)//遍历每行中剩余的数看是否相同
             {
                 same=0;//通过same将循环内发生的传出，==0就是表示相同，且会立马跳出
                 break;
@@ -32,12 +32,12 @@ int is_draw(void)//先写对结果的判断和return再进入分支；通过计数器来统计
     //检查列        与上一个差不多就不写注释了
     for(int i=0;i<5;i++)
     {
-        int base=board[0*5][i];
+        int base=board[0][i];
         int same=1;
     
         for(int j=1;j<5;j++)
         {
-            if(board[j*5][i]!=base)
+            if(board[j][i]!=base)
             {
                 same=0;
                 break;
@@ -51,12 +51,12 @@ int is_draw(void)//先写对结果的判断和return再进入分支；通过计数器来统计
     }
     //检查对角线,两条分别检查。i和j来遍历行和列
     {
-        int base=board[0];
+        int base=board[0][0];
         int same=1;
 
         for (int j = 1; j < 5; j++)
         {
-            if (board[j * 5][ j] != base)
+            if (board[j][j] != base)
             {
                 same = 0;
                 break;
@@ -73,7 +73,7 @@ int is_draw(void)//先写对结果的判断和return再进入分支；通过计数器来统计
 
         for (int j = 1; j < 5; j++)
         {
-            if (board[j * 5 ][4 - j] != base)
+            if (board[j][4 - j] != base)
             {
                 same = 0;
                 break;
