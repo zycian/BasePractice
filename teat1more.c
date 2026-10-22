@@ -68,7 +68,7 @@ int is_draw(void)//先写对结果的判断和return再进入分支；通过计数器来统计
     }
     //另一条对角线
     {
-        int base = board[0 * 5][ 4];
+        int base = board[0][ 4];
         int same = 1;
 
         for (int j = 1; j < 5; j++)
